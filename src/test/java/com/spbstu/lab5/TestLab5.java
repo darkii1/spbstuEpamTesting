@@ -5,6 +5,7 @@ import com.epam.jdi.uitests.web.testng.testRunner.TestNGBase;
 import com.spbstu.lab5.entities.MetalsAndColorsDataSet;
 import com.spbstu.lab5.enums.PAGE_DATA;
 import com.spbstu.lab5.utilities.TestConfig;
+import com.spbstu.lab5.utilities.Users;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -31,7 +32,7 @@ public class TestLab5 extends TestNGBase {
 
         homePageJDI.open();
         homePageJDI.checkOpened();
-        TestWebsiteSelenide.login(PAGE_DATA.LOGIN.str, PAGE_DATA.PASSWORD.str);
+        TestWebsiteSelenide.login(Users.EPAM);
         TestWebsiteSelenide.openMetalsAndColorsPage();
         metalsAndColorsPageJDI.vegetables.select("Salad");
     }

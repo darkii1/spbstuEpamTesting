@@ -1,7 +1,7 @@
 package com.spbstu.lab5;
 
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
-import com.spbstu.lab5.entities.User;
+import com.spbstu.lab5.utilities.User;
 import com.spbstu.lab5.pages.HomePageJDI;
 import com.spbstu.lab5.pages.MetalsAndColorsPage;
 import com.epam.jdi.uitests.web.selenium.elements.common.Button;
@@ -37,4 +37,8 @@ public class TestWebsiteSelenide extends WebSite {
     }
 
 
+    public static void login(User user) {
+        profilePhoto.click();
+        loginForm.loginAs(user);
+    }
 }

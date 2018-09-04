@@ -1,4 +1,4 @@
-package com.spbstu.lab5.entities;
+package com.spbstu.lab5.utilities;
 
 public class User {
     public String name;
